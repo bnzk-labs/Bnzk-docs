@@ -19,7 +19,7 @@ Many utxo transactions in 1 block.
 Many inscrible, like brc20 json, in 1 block
 ```json
 ```
-How to prove ownership :  map the utxo to inscrible(json)
+How to prove ownership :  map the utxo to inscrible(json)  
 Ordinals record the mapping in it's centralized server
 
 
@@ -27,7 +27,9 @@ Ordinals record the mapping in it's centralized server
 
 ### Zero knowledge proof
 
-Bitcoin is designed for transfer utxo with simple op , turing-complete. so there is no way to run complicate computation/smart contract. However, state-of-the-art recursive aggregation zk proof system(plonky2, gsnark..) reduce the complexicity of verify proof. Let's say, if the verify could be reduce to sha256(msg) == hash, then the proof can be verify with bitcoin sha256 op.
+Bitcoin is designed for transfer utxo with simple op , turing-complete. so there is no way to run complicate computation/smart contract.    
+
+However, state-of-the-art recursive aggregation zk proof system(plonky2, gsnark..) reduce the complexicity of verify proof. Let's say, if the verify could be reduce to sha256(msg) == hash, then the proof can be verify with bitcoin sha256 op.
 
 
 ### ZK Oridinals Protocol
@@ -36,14 +38,14 @@ Bitcoin is designed for transfer utxo with simple op , turing-complete. so there
 
 ### Modular Blockchain
 
-DA : BTC
-Settle : Layer2 --> BTC ?
-Execution : Layer2, bitcoin do not support complicate operations
+DA : BTC  
+Settle : Layer2 --> BTC ?   
+Execution : Layer2, bitcoin do not support complicate operations   
 Consesus : Layer2 --> BTC ?
 
 
 ## Roadmap:
 
-zkOrdinal protocol : 
-zk layer2 : security on Layer2 consesus
-prove zkp on Bitcoin : security on Bitmain, recursive aggregation zkp 
+1. zkOrdinal protocol :   
+2. zk layer2 : security on Layer2 consesus  
+3. prove zkp on Bitcoin : security on Bitmain, recursive aggregation zkp 
