@@ -1,13 +1,13 @@
-# Bizk : zk empowers decentralized protocols for Bitcoin Native ecosystem.
+# Bnzk : zk empowers decentralized protocols for Bitcoin Native ecosystem.
 
 ## Keywords :
 * Bitcoin Native
-* Zero-knowledge proof
 * Decentralize
+* Zero-knowledge proof
 
 ## Vision
 
-BIZK aims to integrate zero-knowledge proof technology into the Bitcoin ecosystem in a BTC Native manner, to address the decentralization and verifiability issues of existing BTC ecosystem protocols such as ordinals.
+Bnzk-labs aims to integrate zero-knowledge proof technology into the Bitcoin ecosystem in a BTC Native manner, to address the decentralization and verifiability issues of existing BTC ecosystem protocols such as ordinals.
 
 ## Bitcoin Native
 
@@ -25,8 +25,7 @@ Therefore, we consider BTC Native to be of utmost importance, and the design alw
 
 ## Decentralized
 
-
-The non-Turing complete nature of BTC prevents the execution of smart contracts directly on the blockchain.
+Bitcoin is limited in its ability to execute complex smart contracts, thus unable to implement certain complex business logic.
 
 The [Ordinals protocol]((https://docs.ordinals.com/guides/inscriptions.html)) offers an innovative approach by incorporating protocol metadata into transactions. for example, the BRC20 metadata looks like,
 ```json
@@ -52,11 +51,16 @@ OP_IF
 OP_ENDIF
 ```
 
+The corresponding ordi encode data is like,
+![](https://hackmd.io/_uploads/SkD0b6sL3.png)
+
+
+
 Indeed, the transaction's Inscription data and the UTXO transaction itself form the witness for the Ordinals protocol. However, due to Bitcoin's inability to execute smart contract verification, the parsing of protocol witness data needs to be done off-chain. Ordinals wrapper provides an [ordi utility](https://docs.ordinals.com/guides/inscriptions.html) based on the Bitcoin Core wallet, allowing users to create inscriptions and exercise SAT control.
 
-This approach is very centralized. To validate the proper execution of the protocol, users are required to set up a Bitcoin full node and build a complete Ordinals database. This process is not easy and requires technical expertise.
+This approach is centralized. To validate the proper execution of the protocol, users are required to set up a Bitcoin full node and build a complete Ordinals database. This process is not easy and requires technical expertise.
 
-BIZK solves this problem by inspects each Bitcoin transaction and generates a zero-knowledge proof. Since ZK Circuit is open source, Everyone can verify the proof.
+Bnzk solves this problem by inspects each Bitcoin transaction and generates zero-knowledge proof recursively. Since ZK Circuit is open source, Everyone can verify the proof.
 
 ## Zero knowledge proof
 
@@ -96,10 +100,11 @@ template zkOrdinals() {
     signal input root;
     signal output new_root;
 
-    // check utxo correct match on-chain data
-    ...
+    // check utxo...
+    
+    // check on-chain data(inscription)
         
-    // check BRC20/BRC721...
+    // BRC20/BRC721 Protocol...
     
     // compute new root
     component poseidon = Poseidon(3);
@@ -116,43 +121,36 @@ component main {public [root, new_root]} = zkOrdinals();
 
 ## Protocol
 
-TODO
+zero knowledge prove is now protocol specific, Our plan is to first support the ordinals BRC20 protocol(zkToken), followed by BRC721(zkNFT) and other protocols, The dedicated design will be open-sourced soon.
 
 
-Include a set of Bitcoin zk-rollup protocol, like zkToken(BRC20), zkNFT(BRC721)...
+### zkToken(Soon)
 
-### zkToken(BRC20)
+The goal is prove ownership change with UTXO transfer.
 
-TODO
+### zkNFT(Soon)
 
-Many utxo transactions in 1 block.
-Many inscribles, like brc20 json, in 1 block
-
-How to prove ownership :  map the utxo to inscrible(json)  
-
-
-### zkNFT(BRC20)
-
-TODO
 
 
 ## zkProver
 
 
-By offering Prover proof services utilizing recursive proofs (similar to Mina), the protocol can retain the state root while minimizing the amount of witness data. This approach reduces the burden on users and simplifies the verification process.
+By offering Prover proof services utilizing recursive proofs, the protocol can retain the state root while minimizing the amount of witness data. This approach reduces the burden on users and simplifies the verification process.
 
-publish our zero-knowledge proof (zk proof) on the Bitcoin blockchain Periodically.
-
-anyone can download the proof and verify it either validator service(zkValidator) or on the blockchain(zkNetwork).
+zero-knowledge proof (zk proof) will be published to the Bitcoin blockchain Periodically, anyone can download the proof and verify it either with validator service(zkValidator) or on the blockchain(zkNetwork).
 
 ## zkValidator
 
-a dedicated economic incentive mechanisms is designed to ensure that proofs are generated and verified correctly.
+Multi protocol zkProver can benefit from the same zkValidator framework.
+
+The recursive proof design makes the prove and verification simpler and more efficient.
+
+Dedicated economic incentive mechanisms is designed to ensure that proofs are verified correctly in a decentralized way.
 
 
 ## zkNetwork
 
-We plan to build a modular blockchain to furthermore decentralize the zkValidator Service, using BTC as the data availablity layer.
+A modular blockchain to furthermore decentralize the zkValidator Service, using BTC as the data availablity layer.
 
 
 ## Roadmap:
@@ -164,7 +162,7 @@ We plan to build a modular blockchain to furthermore decentralize the zkValidato
 
 ```mermaid
 gantt
-    title BIZK Roadmap
+    title BNZK Roadmap
     dateFormat YYYY-MM
     axisFormat %Y-%m
     
@@ -181,16 +179,4 @@ gantt
         mainnet           :m, after t, 180d
 
 ```
-
-
-
-## TODO 
-
-* zkToken/zkNFT protocol
-* JS SDK doc
-* state-of-the-art recursive aggregation zk proof system(plonky2, gsnark..) reduce the complexicity of verify proof. Let's say, if the verify could be reduce to sha256(msg)== hash, then the proof can be verify with bitcoin sha256 op. keep in mind, xxx
-* recursive proof(mina)
-* Privacy
-* zkBVM
-
 
