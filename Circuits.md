@@ -1,7 +1,0 @@
-# zkOridinal
-
-## Protocol
-
-
-
-## Audit
