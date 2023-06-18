@@ -12,6 +12,10 @@ Bnzk Labs aims to integrate **Zero-Knowledge (ZK) Proof** technology into the Bi
 
 
 
+<figure><img src=".gitbook/assets/photo_2023-06-18_14-53-17.jpg" alt=""><figcaption></figcaption></figure>
+
+
+
 ### Key Problems
 
 Ordinals are protocols that enable complex data store on Bitcoin by incorporating protocol metadata into transactions. For example, BRC20 and ORC20 allow users to create and transfer tokens on Bitcoin.

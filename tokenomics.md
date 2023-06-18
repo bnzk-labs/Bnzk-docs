@@ -11,9 +11,11 @@ BNZK is the native token of the Bnzk network - the first ZK proof network for Bi
 The total supply of BNZK tokens is 100 million. The tokenomics are as follows:
 
 * **Team reserve:** 10% of the tokens are reserved for the Bnzk team. These tokens will be used to fund the development and growth of the Bnzk network.
-* **Ecosystem rewards:** 20% of the tokens are allocated to reward ecosystem and community participants. This includes developers, validators, and users of the Bnzk network.
+* **Ecosystem rewards:** 20% of the tokens are allocated to reward ecosystem and community participants. This includes developers, contributors, and users of the Bnzk network.
 * **Public sale and private sale:** 40% of the tokens are available for purchase in public and private sales.
 * **Mining rewards:** 30% of the tokens are distributed to zkProvers and zkValidators who secure the Bnzk network.
+
+<figure><img src=".gitbook/assets/Screen Shot 2023-06-18 at 3.24.15 PM.png" alt=""><figcaption></figcaption></figure>
 
 
 
