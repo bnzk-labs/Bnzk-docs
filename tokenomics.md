@@ -24,6 +24,6 @@ The total supply of BNZK tokens is 100 million. The tokenomics are as follows:
 Here are some of the benefits of using BNZK tokens:
 
 * **Decentralization:** BNZK tokens are a decentralized asset that powers a large distributed ZK infrastructure and incentivizes the network participants.
-* **Security:** BNZK tokens are used to secure the Bnzk network. This means that they are held by zkProvers and zkValidators who are responsible for verifying transactions and blocks on the network.
-* **Scalability:** BNZK tokens are designed to be scalable. This means that the network can handle a large number of transactions without experiencing congestion or high fees.
+* **Security:** BNZK tokens are used to secure the Bnzk network with unique incentive model that zkProvers and zkValidators who are responsible for verifying transactions and blocks on the network.
+* **Scalability:** BNZK tokens are designed to be scalable that the network can handle a large number of transactions without experiencing congestion or high fees.
 
