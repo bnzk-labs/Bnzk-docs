@@ -1,4 +1,4 @@
-# Bnzk : zk empowers decentralized protocols for Bitcoin Native ecosystem.
+# What is Bnzk?
 
 ## Keywords :
 
@@ -49,7 +49,9 @@ OP_IF
 OP_ENDIF
 ```
 
-The corresponding ordi encode data is like, ![](https://hackmd.io/\_uploads/SkD0b6sL3.png)
+The corresponding ordi encode data is like,
+
+<figure><img src="https://hackmd.io/_uploads/SkD0b6sL3.png" alt=""><figcaption></figcaption></figure>
 
 Indeed, the transaction's Inscription data and the UTXO transaction itself form the witness for the Ordinals protocol. However, due to Bitcoin's inability to execute smart contract verification, the parsing of protocol witness data needs to be done off-chain. Ordinals wrapper provides an [ordi utility](https://docs.ordinals.com/guides/inscriptions.html) based on the Bitcoin Core wallet, allowing users to create inscriptions and exercise SAT control.
 
