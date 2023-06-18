@@ -35,3 +35,5 @@ Bnzk leverages state-of-the-art ZK technologies such as ZK-Rollup, recursive pro
 
 
 {% embed url="https://en.wikipedia.org/wiki/Zero-knowledge_proof" %}
+Learn more about ZK Proof
+{% endembed %}
