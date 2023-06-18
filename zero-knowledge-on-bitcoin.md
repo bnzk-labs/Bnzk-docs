@@ -43,7 +43,7 @@ OP_IF
 OP_ENDIF
 ```
 
-The corresponding ordi encode data is like,
+The corresponding ordi encode data is like:
 
 <figure><img src="https://hackmd.io/_uploads/SkD0b6sL3.png" alt=""><figcaption></figcaption></figure>
 
