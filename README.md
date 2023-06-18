@@ -1,6 +1,7 @@
 # Bnzk : zk empowers decentralized protocols for Bitcoin Native ecosystem.
 
 ## Keywords :
+
 * Bitcoin Native
 * Decentralize
 * Zero-knowledge proof
@@ -13,21 +14,18 @@ Bnzk-labs aims to integrate zero-knowledge proof technology into the Bitcoin eco
 
 Bitcoin enables programming through the use of [script](https://en.bitcoin.it/wiki/Script)
 
-
 Script is a very simple and limited programming language on BTC. Its security-centric design forbids complicated and unanalyzable operations to be executed on Bitcoin blockchain. As a result, Turing completeness is not achievable with Script, as loops are disallowed. Starting from version 0.3.5, even the multiplication instruction (MUL) has been removed for security reasons, which is why it is not considered Turing complete.
-
 
 This deliberate and cautious design has made Bitcoin remarkably secure and stable since its inception. Bitcoin has not experienced any security vulnerabilities leading to hard forks (unlike Ethereum's ETC fork), which has further solidified its strongest consensus.
 
-
 Therefore, we consider BTC Native to be of utmost importance, and the design always adheres to this principle, thus don’t affect any original use of Bitcoin.
-
 
 ## Decentralized
 
 Bitcoin is limited in its ability to execute complex smart contracts, thus unable to implement certain complex business logic.
 
-The [Ordinals protocol]((https://docs.ordinals.com/guides/inscriptions.html)) offers an innovative approach by incorporating protocol metadata into transactions. for example, the BRC20 metadata looks like,
+The [Ordinals protocol](\(https:/docs.ordinals.com/guides/inscriptions.html\)) offers an innovative approach by incorporating protocol metadata into transactions. for example, the BRC20 metadata looks like,
+
 ```json
     { 
         "p": "brc-20",    //Protocol: offchain system will recognize brc-20 event
@@ -51,10 +49,7 @@ OP_IF
 OP_ENDIF
 ```
 
-The corresponding ordi encode data is like,
-![](https://hackmd.io/_uploads/SkD0b6sL3.png)
-
-
+The corresponding ordi encode data is like, ![](https://hackmd.io/\_uploads/SkD0b6sL3.png)
 
 Indeed, the transaction's Inscription data and the UTXO transaction itself form the witness for the Ordinals protocol. However, due to Bitcoin's inability to execute smart contract verification, the parsing of protocol witness data needs to be done off-chain. Ordinals wrapper provides an [ordi utility](https://docs.ordinals.com/guides/inscriptions.html) based on the Bitcoin Core wallet, allowing users to create inscriptions and exercise SAT control.
 
@@ -66,27 +61,25 @@ Bnzk solves this problem by inspects each Bitcoin transaction and generates zero
 
 we use state-of-the-art Zero-Knowledge proof to prevent malicious activity, In brief, ZK technology employs mathematical methods to create a trusted computing environment.
 
-prove state : $\pi_i=Prove(data_i, utxo_i, root, newRoot))$
+**Prove State:**
 
-verify stage : $Verify(\pi_i, root, newRoot)==true$
+$$
+\pi_i = Prove(data_i, utxo_i, root, newRoot)
+$$
 
-```mermaid
-    sequenceDiagram
-        participant P	as zkProver
-        participant B 	as Bitcoin Chain
-        participant V	as zkValidator
+**Verify Stage:**
 
-    rect rgba(0, 220, 110, .3)
-        B ->> P : utxo, data, root
-        P ->> P : generate zkp proof
-        P ->> B : proof, new_root
-    end
-    
-    rect rgba(0, 110, 220, .3)
-        B ->> V : proof, root, newRoot
-        V ->> V : verify(proof, root, newRoot)
-    end
-```
+$$
+Verify(\pi_i, root, newRoot) == true
+$$
+
+
+
+<figure><img src=".gitbook/assets/Screen Shot 2023-06-18 at 12.13.53 PM.png" alt=""><figcaption></figcaption></figure>
+
+
+
+
 
 A simple zk circuit pseudocode is like
 
@@ -123,17 +116,13 @@ component main {public [root, new_root]} = zkOrdinals();
 
 zero knowledge prove is now protocol specific, Our plan is to first support the ordinals BRC20 protocol(zkToken), followed by BRC721(zkNFT) and other protocols, The dedicated design will be open-sourced soon.
 
-
 ### zkToken(Soon)
 
 The goal is prove ownership change with UTXO transfer.
 
 ### zkNFT(Soon)
 
-
-
 ## zkProver
-
 
 By offering Prover proof services utilizing recursive proofs, the protocol can retain the state root while minimizing the amount of witness data. This approach reduces the burden on users and simplifies the verification process.
 
@@ -147,11 +136,9 @@ The recursive proof design makes the prove and verification simpler and more eff
 
 Dedicated economic incentive mechanisms is designed to ensure that proofs are verified correctly in a decentralized way.
 
-
 ## zkNetwork
 
 A modular blockchain to furthermore decentralize the zkValidator Service, using BTC as the data availablity layer.
-
 
 ## Roadmap:
 
@@ -160,23 +147,5 @@ A modular blockchain to furthermore decentralize the zkValidator Service, using 
 * zkNetwork
 
 
-```mermaid
-gantt
-    title BNZK Roadmap
-    dateFormat YYYY-MM
-    axisFormat %Y-%m
-    
-     %% (verifiable)
-    section zkOrdinal
-        zkProver(BRC20)    : zbp, 2023-06, 120d
-        zkValidator       : v, after zbp, 90d
-        zkProver(BRC721,.etc)        :zn, after v, 180d
-        
 
-     %% (Decentralized)
-    section zkNetwork
-        testnet           :t, 2024-03, 180d
-        mainnet           :m, after t, 180d
-
-```
-
+<figure><img src=".gitbook/assets/Screen Shot 2023-06-18 at 12.11.59 PM.png" alt=""><figcaption></figcaption></figure>
