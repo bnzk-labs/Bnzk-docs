@@ -83,7 +83,7 @@ $$
 
 A simple zk circuit pseudocode is like
 
-```cpp=
+```rust
 
 include "@circomlib/circuits/poseidon.circom";
 
