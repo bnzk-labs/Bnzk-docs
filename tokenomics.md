@@ -15,7 +15,9 @@ The total supply of BNZK tokens is 100 million. The tokenomics are as follows:
 * **Public sale and private sale:** 40% of the tokens are available for purchase in public and private sales.
 * **Mining rewards:** 30% of the tokens are distributed to zkProvers and zkValidators who secure the Bnzk network.
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-06-18 at 3.24.15 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screen Shot 2023-06-18 at 3.28.51 PM.png" alt=""><figcaption></figcaption></figure>
+
+
 
 
 
