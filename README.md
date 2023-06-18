@@ -1,3 +1,7 @@
+---
+description: ZK empowers decentralized protocols for Bitcoin Native ecosystem
+---
+
 # What is Bnzk?
 
 ## Keywords :
