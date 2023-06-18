@@ -24,7 +24,7 @@ This deliberate and cautious design has made Bitcoin remarkably secure and stabl
 
 Therefore, we consider BTC Native to be of utmost importance, and the design always adheres to this principle, thus don’t affect any original use of Bitcoin.
 
-## Decentralized
+## Decentralization
 
 Bitcoin is limited in its ability to execute complex smart contracts, thus unable to implement certain complex business logic.
 
@@ -63,7 +63,9 @@ This approach is centralized. To validate the proper execution of the protocol, 
 
 Bnzk solves this problem by inspects each Bitcoin transaction and generates zero-knowledge proof recursively. Since ZK Circuit is open source, Everyone can verify the proof.
 
-## Zero knowledge proof
+
+
+## Zero Knowledge Proof
 
 we use state-of-the-art Zero-Knowledge proof to prevent malicious activity, In brief, ZK technology employs mathematical methods to create a trusted computing environment.
 
@@ -78,8 +80,6 @@ $$
 $$
 Verify(\pi_i, root, newRoot) == true
 $$
-
-
 
 <figure><img src=".gitbook/assets/Screen Shot 2023-06-18 at 12.13.53 PM.png" alt=""><figcaption></figcaption></figure>
 
