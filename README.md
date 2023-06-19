@@ -12,7 +12,7 @@ Bnzk Labs aims to integrate **Zero-Knowledge (ZK) Proof** technology into the Bi
 
 
 
-<figure><img src=".gitbook/assets/photo_2023-06-18_14-53-17.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/bnzk-arch.jpg" alt=""><figcaption></figcaption></figure>
 
 
 
