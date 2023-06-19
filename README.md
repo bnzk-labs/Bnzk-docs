@@ -12,6 +12,10 @@ Bnzk Labs aims to integrate **Zero-Knowledge (ZK) Proof** technology into the Bi
 
 
 
+> _Would you trust a centralized node to store all Bitcoin's TX data?_
+>
+> _If no, how do you trust a central indexer to store all BRC20 data._
+
 <img src=".gitbook/assets/file.excalidraw (1).svg" alt="" class="gitbook-drawing">
 
 ### Key Problems
