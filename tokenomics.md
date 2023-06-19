@@ -8,7 +8,7 @@ description: Incentivizing a trustless ZK infrastructure
 
 BNZK is the native token of the Bnzk infrastructure - the first ZK proof infrastructure for Bitcoin. It is used to pay for network fees, secure the infra layer, and incentivize participants in the Bnzk ecosystem.
 
-The total supply of BNZK tokens is 100 million. The tokenomics are as follows:
+The total supply of BNZK tokens is 21 million. The tokenomics are as follows:
 
 * **Team reserve:** 10% of the tokens are reserved for the Bnzk team. These tokens will be used to fund the development and growth of the Bnzk network.
 * **Ecosystem rewards:** 20% of the tokens are allocated to reward ecosystem and community participants. This includes developers, contributors, and users of the Bnzk ecosystem.
