@@ -16,7 +16,7 @@ Bnzk Labs aims to integrate **Zero-Knowledge (ZK) Proof** technology into the Bi
 >
 > ### _If no, how do you trust a central indexer to store all BRC20 data._
 
-<img src=".gitbook/assets/file.excalidraw (1).svg" alt="" class="gitbook-drawing">
+<img src=".gitbook/assets/file.excalidraw (2).svg" alt="" class="gitbook-drawing">
 
 ### Key Problems
 
@@ -34,7 +34,9 @@ Bnzk leverages state-of-the-art ZK technologies such as ZK-Rollup, recursive pro
 
 
 
-<figure><img src=".gitbook/assets/bnzk-arch.jpg" alt=""><figcaption></figcaption></figure>
+<img src=".gitbook/assets/file.excalidraw (1).svg" alt="" class="gitbook-drawing">
+
+
 
 
 
