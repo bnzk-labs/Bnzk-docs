@@ -16,7 +16,7 @@ Bnzk Labs aims to integrate **Zero-Knowledge (ZK) Proof** technology into the Bi
 >
 > ### _If no, how do you trust a central indexer to store all BRC20 data._
 
-<img src=".gitbook/assets/file.excalidraw (2).svg" alt="" class="gitbook-drawing">
+<img src=".gitbook/assets/file.excalidraw (3).svg" alt="" class="gitbook-drawing">
 
 ### Key Problems
 
@@ -32,13 +32,7 @@ Bnzk solves this problem by validating ordinals transactions off-chain and gener
 
 Bnzk leverages state-of-the-art ZK technologies such as ZK-Rollup, recursive proofs, and dedicated rollups. ZK-Rollup is a layer-2 scaling solution that aggregates multiple ordinals transactions into a single Bitcoin transaction with a ZK-proof. Recursive proofs are a technique that allows ZK-provers and ZK-validators to generate and verify ZK-proofs efficiently and securely. Dedicated rollups are a design that allows Bnzk to support different ordinals protocols such as BRC20, BRC721, and ORC20 with separate state roots and economic incentives.
 
-
-
 <img src=".gitbook/assets/file.excalidraw (1).svg" alt="" class="gitbook-drawing">
-
-
-
-
 
 {% embed url="https://en.wikipedia.org/wiki/Zero-knowledge_proof" %}
 Learn more about ZK Proof
