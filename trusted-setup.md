@@ -42,6 +42,8 @@ To depict this procedure, let's consider a situation involving a Coordinator, tw
 5. The Coordinator generates challenge_2 and makes it public.
 6. Charlie utilizes the random beacon to incorporate challenge_2 into the final setup.
 
+<img src=".gitbook/assets/trust-setup-multiparticipants.png" alt="" class="gitbook-drawing">
+
 The resulting public transcript should contain:
 
 1. challenge_0
@@ -52,6 +54,8 @@ The resulting public transcript should contain:
 6. The random beacon
 7. The final parameters
 
+Verfiy the Setup
+<img src=".gitbook/assets/trust-setup-verifying.png" alt="" class="gitbook-drawing">
 
 Fortunately, we don't have to build from scratch. There are some reliable works :
 * [Zcash power of tau ceremony](https://zfnd.org/conclusion-of-the-powers-of-tau-ceremony/)
