@@ -2,7 +2,7 @@
 description: Incentivizing a trustless ZK infrastructure
 ---
 
-# Tokenomics
+# CryptoEconomic
 
 
 
